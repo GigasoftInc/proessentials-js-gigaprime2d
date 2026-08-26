@@ -8,6 +8,9 @@ Live FPS displayed above the chart.
 
 ![ProEssentials JavaScript Chart 100 Million Points Live Demo](docs/fastest-javascript-chart-live-demo.png)
 
+
+**See this repo live now in your browser: [click here](https://gigasoft.com/fastest-javascript-chart-live-demo/)**
+
 ---
 
 ## What This Demonstrates
