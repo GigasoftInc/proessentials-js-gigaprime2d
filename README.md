@@ -11,6 +11,9 @@ Live FPS displayed above the chart.
 
 **See this repo live now in your browser: [click here](https://gigasoft.com/fastest-javascript-chart-live-demo/)**
 
+If you like what you see, we'd appreciate a star -- it helps more
+than you realize.
+
 ---
 
 ## What This Demonstrates
