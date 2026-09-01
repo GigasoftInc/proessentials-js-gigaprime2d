@@ -885,6 +885,16 @@ async function fetchEngineWithProgress(url) {
   try { await PeControl.loadBuiltins('lib/bmps'); } catch (e) { /* backgrounds only */ }
   await PeControl.loadNotifyNames('lib/pewn-names.json');
 
+  // The visitor's own language, for the popup menu and the built-in dialogs.
+  // No tag: PeControl.culture() reads navigator.languages, which is what a
+  // desktop control does with the OS culture -- it exposes no property for it
+  // either.  The candidate walk maximizes the tag before matching, so zh-CN
+  // finds the zh-Hans bundle rather than falling through to English, and
+  // English is overlaid underneath every culture so an id a translation lacks
+  // keeps its English label.  Before the control exists, because its menus are
+  // built with these strings.
+  await PeControl.loadStrings(m);
+
   // No gpuLayer option: passing one tells the control the page owns the GPU
   // path and stops it installing its own.  trackRejects names any property
   // the engine refuses, for the status line.
